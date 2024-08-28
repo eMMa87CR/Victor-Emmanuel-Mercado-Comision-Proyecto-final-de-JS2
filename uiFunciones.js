@@ -1,6 +1,6 @@
 import { agregarAlCarrito, cargarCarritoDeLocalStorage } from './carritoFunciones.js';
 
-export let productos = []; // Declarar y exportar productos como variable global
+export let productos = [];
 
 export function mostrarProductos() {
   const productosDiv = document.getElementById("productos");
@@ -39,7 +39,7 @@ export function cargarProductos() {
       return response.json();
     })
     .then((data) => {
-      productos = data.productos; // Asignar a la variable global
+      productos = data.productos;
       mostrarProductos();
       cargarCarritoDeLocalStorage();
     })
