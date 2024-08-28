@@ -18,7 +18,7 @@ export function agregarAlCarrito(index) {
       toast: true,
       position: 'top-end',
       showConfirmButton: false,
-      timer: 800,
+      timer: 500,
       timerProgressBar: true,
       didOpen: (toast) => {
         toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -32,33 +32,37 @@ export function agregarAlCarrito(index) {
 
 export function actualizarCarrito() {
   const carritoDropdown = document.getElementById("carrito-dropdown");
+  const carritoOffcanvas = document.getElementById("carrito-offcanvas");
   const carritoCantidad = document.getElementById("carrito-cantidad");
+  const carritoCantidadFlotante = document.getElementById("carrito-cantidad-flotante");
 
   carritoDropdown.innerHTML = '';
+  carritoOffcanvas.innerHTML = '';
 
   if (carrito.productos.length === 0) {
-    carritoDropdown.innerHTML = '<li><span class="dropdown-item-text">El carrito está vacío</span></li>';
+    const emptyMessage = '<div class="dropdown-item-text">El carrito está vacío</div>';
+    carritoDropdown.innerHTML = emptyMessage;
+    carritoOffcanvas.innerHTML = emptyMessage;
   } else {
     carrito.productos.forEach((producto) => {
-      const dropdownItem = document.createElement("li");
-      dropdownItem.innerHTML = `
-        <div class="dropdown-item-text d-flex justify-content-between align-items-center">
+      const itemHTML = `
+        <div class="dropdown-item-text d-flex justify-content-between align-items-center mb-2">
           <span>${producto.nombre} - $${producto.precio} x ${producto.cantidad}</span>
           <button class="btn btn-sm btn-danger" onclick="eliminarDelCarrito('${producto.nombre}')">
             <i class="fas fa-minus"></i>
           </button>
         </div>
       `;
-      carritoDropdown.appendChild(dropdownItem);
+      carritoDropdown.innerHTML += itemHTML;
+      carritoOffcanvas.innerHTML += itemHTML;
     });
 
-    const totalItem = document.createElement("li");
-    totalItem.innerHTML = `<div class="dropdown-item-text font-weight-bold">Total: $${carrito.calcularTotal()}</div>`;
-    carritoDropdown.appendChild(totalItem);
+    const totalHTML = `<div class="dropdown-item-text font-weight-bold">Total: $${carrito.calcularTotal()}</div>`;
+    carritoDropdown.innerHTML += totalHTML;
+    carritoOffcanvas.innerHTML += totalHTML;
 
-    const botonesItem = document.createElement("li");
-    botonesItem.innerHTML = `
-      <div class="dropdown-item-text d-flex justify-content-between">
+    const botonesHTML = `
+      <div class="dropdown-item-text d-flex justify-content-between mt-3">
         <button class="btn btn-sm btn-primary" onclick="realizarCompra()">
           <i class="fas fa-shopping-bag"></i> Comprar
         </button>
@@ -67,10 +71,13 @@ export function actualizarCarrito() {
         </button>
       </div>
     `;
-    carritoDropdown.appendChild(botonesItem);
+    carritoDropdown.innerHTML += botonesHTML;
+    carritoOffcanvas.innerHTML += botonesHTML;
   }
 
-  carritoCantidad.textContent = carrito.productos.reduce((total, producto) => total + producto.cantidad, 0);
+  const cantidadTotal = carrito.productos.reduce((total, producto) => total + producto.cantidad, 0);
+  carritoCantidad.textContent = cantidadTotal;
+  carritoCantidadFlotante.textContent = cantidadTotal;
 }
 
 export function eliminarDelCarrito(nombre) {

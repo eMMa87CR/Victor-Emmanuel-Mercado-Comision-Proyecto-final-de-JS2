@@ -68,6 +68,23 @@
             <p>&copy; 2023 Farmacia Roca. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <!-- Añade esto justo antes del cierre del body -->
+    <div id="carrito-flotante" class="d-md-none">
+        <button class="btn btn-primary rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="carrito-cantidad-flotante" class="badge bg-danger">0</span>
+        </button>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Carrito de compras</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="carrito-offcanvas">
+            <!-- El contenido del carrito se cargará aquí -->
+        </div>
+    </div>
 </body>
 
 </html>

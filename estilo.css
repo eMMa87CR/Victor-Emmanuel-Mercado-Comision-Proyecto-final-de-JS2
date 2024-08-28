@@ -79,3 +79,24 @@ h1 {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
 }
+
+#carrito-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#carrito-flotante .btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#carrito-cantidad-flotante {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+}
