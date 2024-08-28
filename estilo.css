@@ -1,0 +1,56 @@
+:root {
+    --primary-color: hsl(189, 100%, 30%);
+    --accent-color: hsl(189, 100%, 25%);
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+#carrito {
+    position: sticky;
+    top: 20px;
+}
+
+@media (max-width: 768px) {
+    #carrito {
+        position: static;
+    }
+}
+
+.dropdown-menu {
+    min-width: 300px;
+    padding: 10px;
+}
+
+.dropdown-item-text {
+    white-space: normal;
+    padding: 5px 0;
+}
+
+#carrito-dropdown {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#carrito-dropdown .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+}
