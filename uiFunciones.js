@@ -17,10 +17,10 @@ export function mostrarProductos() {
     productoElement.innerHTML = `
       <div class="card h-100">
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-        <div class="card-body">
+        <div class="card-body d-flex flex-column">
           <h5 class="card-title">${producto.nombre}</h5>
           <p class="card-text">Precio: $${producto.precio}</p>
-          <button class="btn btn-primary w-100" onclick="agregarAlCarrito(${index})">
+          <button onclick="agregarAlCarrito(${index})" class="btn btn-primary mt-auto">
             <i class="fas fa-cart-plus"></i> Agregar al carrito
           </button>
         </div>

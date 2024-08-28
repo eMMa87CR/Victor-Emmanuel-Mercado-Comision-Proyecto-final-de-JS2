@@ -1,10 +1,15 @@
 :root {
-    --primary-color: hsl(189, 100%, 30%);
-    --accent-color: hsl(189, 100%, 25%);
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color: #f5f7fa;
+    --text-color: #34495e;
 }
 
 body {
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -12,11 +17,15 @@ h1 {
 }
 
 .card {
-    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 #carrito {
@@ -43,14 +52,30 @@ h1 {
 #carrito-dropdown {
     max-height: 300px;
     overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #carrito-dropdown .btn-sm {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
+    border-radius: 20px;
 }
 
 .card-img-top {
     height: 200px;
     object-fit: contain;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
