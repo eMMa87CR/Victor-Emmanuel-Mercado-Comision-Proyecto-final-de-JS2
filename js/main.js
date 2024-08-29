@@ -1,5 +1,5 @@
 import { cargarProductos } from './uiFunciones.js';
-import * as carritoFunciones from '/js/carritoFunciones.js';
+import * as carritoFunciones from './carritoFunciones.js';
 import { obtenerClima } from './clima.js';
 
 window.agregarAlCarrito = carritoFunciones.agregarAlCarrito;
