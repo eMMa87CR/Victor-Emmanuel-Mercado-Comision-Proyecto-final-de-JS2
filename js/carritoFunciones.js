@@ -1,6 +1,6 @@
-import { Carrito } from '/js/Carrito.js';
-import { Producto } from '/js/Producto.js';
-import { productos } from '/js/uiFunciones.js';
+import { Carrito } from './Carrito.js';
+import { Producto } from './Producto.js';
+import { productos } from './uiFunciones.js';
 
 const carrito = new Carrito();
 

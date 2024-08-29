@@ -1,4 +1,4 @@
-import { agregarAlCarrito, cargarCarritoDeLocalStorage } from './carritoFunciones.js';
+import { agregarAlCarrito, cargarCarritoDeLocalStorage } from './carritoFunciones';
 
 export let productos = [];
 
