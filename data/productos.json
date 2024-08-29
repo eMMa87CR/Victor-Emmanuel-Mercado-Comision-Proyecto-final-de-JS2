@@ -1,0 +1,84 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Paracetamol",
+        "precio": 1500.00,
+        "stock": 100,
+        "categoria": "Analgésicos",
+        "imagen": "Assets/img/paracetamol-tafirol.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Ibuprofeno",
+        "precio": 1800.00,
+        "stock": 80,
+        "categoria": "Antiinflamatorios",
+        "imagen": "Assets/img/ACTRON-IBUPROFENO.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Omeprazol",
+        "precio": 2500.00,
+        "stock": 60,
+        "categoria": "Antiácidos",
+        "imagen": "Assets/img/Omeprazol.jpg"
+      },
+      {
+        "id": 4,
+        "nombre": "Amoxicilina",
+        "precio": 3200.00,
+        "stock": 50,
+        "categoria": "Antibióticos",
+        "imagen": "Assets/img/Amoxicilina.jpg"
+      },
+      {
+        "id": 5,
+        "nombre": "Loratadina",
+        "precio": 1700.00,
+        "stock": 70,
+        "categoria": "Antialérgicos",
+        "imagen": "Assets/img/Loratadina.jpg"
+      },
+      {
+        "id": 6,
+        "nombre": "Aspirina",
+        "precio": 1300.00,
+        "stock": 90,
+        "categoria": "Analgésicos",
+        "imagen": "Assets/img/Aspirina.jpg"
+      },
+      {
+        "id": 7,
+        "nombre": "Cetirizina",
+        "precio": 2000.00,
+        "stock": 70,
+        "categoria": "Antialérgicos",
+        "imagen": "Assets/img/Cetirizina.jpg"
+      },
+      {
+        "id": 8,
+        "nombre": "Metformina",
+        "precio": 2600.00,
+        "stock": 40,
+        "categoria": "Antidiabéticos",
+        "imagen": "Assets/img/Metformina.jpg"
+      },
+      {
+        "id": 9,
+        "nombre": "Atorvastatina",
+        "precio": 3800.00,
+        "stock": 55,
+        "categoria": "Hipolipemiantes",
+        "imagen": "Assets/img/Atorvastatina.jpg"
+      },
+      {
+        "id": 10,
+        "nombre": "Diclofenaco",
+        "precio": 2200.00,
+        "stock": 65,
+        "categoria": "Antiinflamatorios",
+        "imagen": "Assets/img/Diclofenaco.jpg"
+      }
+    ]
+  }

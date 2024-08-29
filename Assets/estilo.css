@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color: #dbdbdb;
+    --text-color: #34495e;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2ecc71;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#carrito {
+    position: sticky;
+    top: 20px;
+}
+
+@media (max-width: 768px) {
+    #carrito {
+        position: static;
+    }
+}
+
+.dropdown-menu {
+    min-width: 300px;
+    padding: 10px;
+}
+
+.dropdown-item-text {
+    white-space: normal;
+    padding: 5px 0;
+}
+
+#carrito-dropdown {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#carrito-dropdown .btn-sm {
+    border-radius: 20px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+#carrito-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#carrito-flotante .btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#carrito-cantidad-flotante {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+}
+
+#clima {
+    background-color: #ffffff8e;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+#clima img {
+    vertical-align: middle;
+    margin-left: 10px;
+}
