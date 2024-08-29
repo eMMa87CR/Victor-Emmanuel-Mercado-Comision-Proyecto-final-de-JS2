@@ -1,7 +1,4 @@
-import {
-  agregarAlCarrito,
-  cargarCarritoDeLocalStorage,
-} from "./carritoFunciones.js";
+import { agregarAlCarrito, cargarCarritoDeLocalStorage } from './carritoFunciones.js';
 
 export let productos = [];
 
@@ -34,7 +31,7 @@ export function mostrarProductos() {
 }
 
 export function cargarProductos() {
-  fetch("data/productos.json")
+  fetch("./data/productos.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
