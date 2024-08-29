@@ -4,4 +4,4 @@ export class Producto {
       this.precio = precio;
       this.cantidad = 0;
     }
-  }
+}
