@@ -1,4 +1,7 @@
-import { agregarAlCarrito, cargarCarritoDeLocalStorage } from './carritoFunciones.js';
+import {
+  agregarAlCarrito,
+  cargarCarritoDeLocalStorage,
+} from "./carritoFunciones.js";
 
 export let productos = [];
 
@@ -8,7 +11,7 @@ export function mostrarProductos() {
     console.error("El elemento 'productos' no existe en el DOM");
     return;
   }
-  
+
   productosDiv.innerHTML = "<h2 class='col-12 mb-4'>Productos Disponibles</h2>";
 
   productos.forEach((producto, index) => {
@@ -46,10 +49,10 @@ export function cargarProductos() {
     .catch((error) => {
       console.error("Error al cargar los productos:", error);
       Swal.fire({
-        title: 'Error',
+        title: "Error",
         text: `Hubo un error al cargar los productos: ${error.message}. Por favor, intenta de nuevo más tarde.`,
-        icon: 'error',
-        confirmButtonText: 'Aceptar'
+        icon: "error",
+        confirmButtonText: "Aceptar",
       });
     });
 }
