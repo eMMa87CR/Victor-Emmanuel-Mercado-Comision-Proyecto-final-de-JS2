@@ -24,8 +24,7 @@ export function obtenerClima() {
       document.getElementById("clima").innerHTML = climaHTML;
     })
     .catch((error) => {
-      console.error("Error al obtener el clima:", error);
       document.getElementById("clima").innerHTML =
-        "<p>No se pudo obtener la información del clima. Por favor, intenta de nuevo más tarde.</p>";
+        "<p>No se pudo obtener la información del clima. Por favor, verifica tu conexión a internet o intenta de nuevo más tarde.</p>";
     });
 }
