@@ -1,6 +1,6 @@
-import { cargarProductos } from './uiFunciones.js';
-import * as carritoFunciones from './carritoFunciones.js';
-import { obtenerClima } from './clima.js';
+import { cargarProductos } from "./uiFunciones.js";
+import { obtenerClima } from "./clima.js";
+import * as carritoFunciones from "./carritoFunciones.js";
 
 window.agregarAlCarrito = carritoFunciones.agregarAlCarrito;
 window.eliminarDelCarrito = carritoFunciones.eliminarDelCarrito;
@@ -10,4 +10,5 @@ window.vaciarCarrito = carritoFunciones.vaciarCarrito;
 document.addEventListener("DOMContentLoaded", () => {
   cargarProductos();
   obtenerClima();
+  carritoFunciones.cargarCarritoDeLocalStorage();
 });
