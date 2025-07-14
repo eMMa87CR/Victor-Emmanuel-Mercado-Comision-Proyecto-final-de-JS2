@@ -16,9 +16,10 @@ export function mostrarProductos() {
     productoElement.className = "col-md-6 col-lg-4 mb-4";
     productoElement.innerHTML = `
       <div class="card h-100">
-        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre} - ${producto.descripcion || 'Producto farmacéutico'}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${producto.nombre}</h5>
+          <p class="card-text">Descripción: ${producto.descripcion || 'Medicamento para aliviar dolores y fiebre'}</p>
           <p class="card-text">Precio: $${producto.precio}</p>
           <button onclick="agregarAlCarrito(${index})" class="btn btn-primary mt-auto">
             <i class="fas fa-cart-plus"></i> Agregar al carrito

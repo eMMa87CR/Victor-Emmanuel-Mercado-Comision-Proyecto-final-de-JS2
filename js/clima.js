@@ -25,6 +25,10 @@ export function obtenerClima() {
     })
     .catch((error) => {
       document.getElementById("clima").innerHTML =
-        "<p>No se pudo obtener la información del clima. Por favor, verifica tu conexión a internet o intenta de nuevo más tarde.</p>";
+        "<p>Error al obtener el clima: " + error.message + "</p>";
     });
 }
+
+// Actualizar clima cada 15 minutos
+setInterval(obtenerClima, 900000);
+obtenerClima(); // Llamada inicial

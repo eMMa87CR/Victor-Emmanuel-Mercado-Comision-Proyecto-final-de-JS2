@@ -36,17 +36,17 @@ export function actualizarCarrito() {
   const carritoCantidad = document.getElementById("carrito-cantidad");
   const carritoCantidadFlotante = document.getElementById("carrito-cantidad-flotante");
 
-  carritoDropdown.innerHTML = '';
-  carritoOffcanvas.innerHTML = '';
+  // Limpia el contenido antes de renderizar
+  carritoDropdown.innerHTML = "";
+  carritoOffcanvas.innerHTML = "";
 
   if (carrito.productos.length === 0) {
-    const emptyMessage = '<div class="dropdown-item-text">El carrito está vacío</div>';
-    carritoDropdown.innerHTML = emptyMessage;
-    carritoOffcanvas.innerHTML = emptyMessage;
+    carritoDropdown.innerHTML = '<div class="dropdown-item-text">El carrito está vacío</div>';
+    carritoOffcanvas.innerHTML = '<div class="dropdown-item-text">El carrito está vacío</div>';
   } else {
     carrito.productos.forEach((producto) => {
       const itemHTML = `
-        <div class="dropdown-item-text d-flex justify-content-between align-items-center mb-2">
+        <div class="dropdown-item-text d-flex justify-content-between align-items-center mb-2" data-nombre="${producto.nombre}">
           <span>${producto.nombre} - $${producto.precio} x ${producto.cantidad}</span>
           <button class="btn btn-sm btn-danger" onclick="eliminarDelCarrito('${producto.nombre}')">
             <i class="fas fa-minus"></i>
@@ -56,11 +56,9 @@ export function actualizarCarrito() {
       carritoDropdown.innerHTML += itemHTML;
       carritoOffcanvas.innerHTML += itemHTML;
     });
-
     const totalHTML = `<div class="dropdown-item-text font-weight-bold">Total: $${carrito.calcularTotal()}</div>`;
     carritoDropdown.innerHTML += totalHTML;
     carritoOffcanvas.innerHTML += totalHTML;
-
     const botonesHTML = `
       <div class="dropdown-item-text d-flex justify-content-between mt-3">
         <button class="btn btn-sm btn-primary" onclick="realizarCompra()">
