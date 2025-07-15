@@ -6,17 +6,50 @@
     --text-color: #34495e;
 }
 
+html {
+    background-color: rgb(240, 232, 232);
+}
+
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 2%;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: rgb(10, 7, 7);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
     color: #2ecc71;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
 
 .card {
@@ -24,16 +57,27 @@ h1 {
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #b0bbb5;
 }
 
 #carrito {
     position: sticky;
     top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
@@ -46,9 +90,11 @@ h1 {
     .card-img-top {
         height: 150px;
     }
+
     .card-body {
         padding: 1rem;
     }
+
     h1 {
         font-size: 2rem;
     }
@@ -59,6 +105,7 @@ h1 {
         max-width: 300px;
         margin: 0 auto;
     }
+
     #productos .col-lg-4 {
         flex: 0 0 25%;
         max-width: 25%;
