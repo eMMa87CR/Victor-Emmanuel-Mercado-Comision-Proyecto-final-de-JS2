@@ -201,9 +201,3 @@ h2 {
     margin-left: 10px;
     max-height: 40px;
 }
-
-h2 {
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-}
