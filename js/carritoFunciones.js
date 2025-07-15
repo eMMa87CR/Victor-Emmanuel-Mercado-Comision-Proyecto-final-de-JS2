@@ -34,7 +34,8 @@ export function actualizarCarrito() {
   const carritoDropdown = document.getElementById("carrito-dropdown");
   const carritoOffcanvas = document.getElementById("carrito-offcanvas");
   const carritoCantidad = document.getElementById("carrito-cantidad");
-  const carritoCantidadFlotante = document.getElementById("carrito-cantidad-flotante");
+  const cantidadFlotanteMovil = document.getElementById("carrito-cantidad-flotante-movil");
+  const cantidadFlotanteEscritorio = document.getElementById("carrito-cantidad-flotante-escritorio");
 
   // Limpia el contenido antes de renderizar
   carritoDropdown.innerHTML = "";
@@ -74,8 +75,9 @@ export function actualizarCarrito() {
   }
 
   const cantidadTotal = carrito.productos.reduce((total, producto) => total + producto.cantidad, 0);
-  carritoCantidad.textContent = cantidadTotal;
-  carritoCantidadFlotante.textContent = cantidadTotal;
+  if (carritoCantidad) carritoCantidad.textContent = cantidadTotal;
+  if (cantidadFlotanteMovil) cantidadFlotanteMovil.textContent = cantidadTotal;
+  if (cantidadFlotanteEscritorio) cantidadFlotanteEscritorio.textContent = cantidadTotal;
 }
 
 export function eliminarDelCarrito(nombre) {
