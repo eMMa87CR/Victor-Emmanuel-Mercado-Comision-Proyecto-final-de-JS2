@@ -52,6 +52,13 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 .card {
     border: none;
     border-radius: 15px;
